@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "279865473379",
+    "firebase_url": "https://sneckrun.firebaseio.com",
+    "project_id": "sneckrun",
+    "storage_bucket": "sneckrun.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279865473379:android:ca638e9d525372bf",
+        "android_client_info": {
+          "package_name": "me.sneckrun.sneckrun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279865473379-0n3mdff2vej3a7reh6c10oneopoj5k6r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.sneckrun.sneckrun",
+            "certificate_hash": "6ab240180870b3bb5bac9d6687e591ae73851787"
+          }
+        },
+        {
+          "client_id": "279865473379-tnjkcvaqhvplom93s94leo5286ap79el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMcqi1C0FfCaHg0V1iwN0ihnLmv2gSe3g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279865473379-tnjkcvaqhvplom93s94leo5286ap79el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
