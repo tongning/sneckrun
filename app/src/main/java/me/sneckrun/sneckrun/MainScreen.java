@@ -12,11 +12,17 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.EditText;
 //import android.widget.Context;
+
+import com.google.firebase.messaging.FirebaseMessaging;
+
 public class MainScreen extends AppCompatActivity {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseMessaging.getInstance().subscribeToTopic("aces-sneck-run");
+
+
         setContentView(R.layout.activity_main_screen);
         button = (Button) findViewById(R.id.needSneck);
         //SharedPreferences = getActivi
