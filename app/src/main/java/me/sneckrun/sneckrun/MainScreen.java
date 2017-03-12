@@ -41,4 +41,9 @@ public class MainScreen extends AppCompatActivity {
         layout.setBackgroundColor(Color.BLACK);
     }
 
+    public void saveBox(View view) {
+        view.
+    }
+    }
+
 }
