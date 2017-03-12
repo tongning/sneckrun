@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import android.content.SharedPreferences;
 
 public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
     private static final String TAG = "MyAndroidFCMService";
@@ -25,7 +26,8 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
         //Log.d(TAG, "From: " + remoteMessage.getFrom());
         //Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
         //create notification
-        String data1 = remoteMessage.getData().get("test");
+        SharedPreferences names = MainScreen.getNames();
+        String data1 = remoteMessage.getData().get("test1");
         String data2 = remoteMessage.getData().get("test2");
         createNotification(data1, data2);
 

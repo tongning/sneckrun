@@ -17,7 +17,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainScreen extends AppCompatActivity {
     private Button button;
-    private SharedPreferences preference;
+    static SharedPreferences preference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,7 @@ public class MainScreen extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "You requested a sneck run!",
+                Toast.makeText(getApplicationContext(), (preference.getString("NickName", "Someone") + " requested a sneck run!"),
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -47,8 +47,11 @@ public class MainScreen extends AppCompatActivity {
     public void saveBox(View view) {
         EditText textBox= (EditText) findViewById(R.id.editText4);
         String valToSave = textBox.getText().toString();
-        preference.edit().putString("NickName:", valToSave);
-        textBox.setText("");
+        preference.edit().putString("NickName", valToSave).apply();
+        //textBox.setText("");
+    }
+    public static SharedPreferences getNames() {
+        return preference;
     }
 
 }
