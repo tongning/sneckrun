@@ -1,5 +1,6 @@
 package me.sneckrun.sneckrun;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.icu.text.RelativeDateTimeFormatter;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.EditText;
+
 import java.util.*;
 import org.json.*;
 import java.io.*;
@@ -20,11 +22,15 @@ import android.util.Log;
 
 //import android.widget.Context;
 
+
+import java.util.Date;
+
 import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class MainScreen extends AppCompatActivity {
     private Button button;
+    private SharedPreferences preference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +40,7 @@ public class MainScreen extends AppCompatActivity {
 
         setContentView(R.layout.activity_main_screen);
         button = (Button) findViewById(R.id.needSneck);
-        //SharedPreferences = getActivi
+        preference = this.getPreferences(Context.MODE_PRIVATE);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,7 +102,7 @@ public class MainScreen extends AppCompatActivity {
     public void saveBox(View view) {
         EditText textBox= (EditText) findViewById(R.id.editText4);
         String valToSave = textBox.getText().toString();
-
+        preference.edit().putString("NickName:", valToSave);
         textBox.setText("");
     }
 
