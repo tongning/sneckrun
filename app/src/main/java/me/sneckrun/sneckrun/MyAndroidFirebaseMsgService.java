@@ -12,6 +12,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.widget.Toast;
+
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -20,10 +22,13 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         //Log data to Log Cat
-        Log.d(TAG, "From: " + remoteMessage.getFrom());
-        Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
+        //Log.d(TAG, "From: " + remoteMessage.getFrom());
+        //Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
         //create notification
-        createNotification(remoteMessage.getNotification().getBody(), remoteMessage.getNotification().getTitle());
+        String data1 = remoteMessage.getData().get("test");
+        String data2 = remoteMessage.getData().get("test2");
+        createNotification(data1, data2);
+
     }
 
     private void createNotification( String messageBody, String title) {
