@@ -29,7 +29,7 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
         SharedPreferences names = MainScreen.getNames();
         String name = remoteMessage.getData().get("name");
 
-        createNotification("Someone wants to snack run!", name+" wants to snackrun.");
+        createNotification(name+" wants to snackrun.", "Snackrun!");
 
     }
 
