@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainScreen extends AppCompatActivity {
     }
 
     public void initiateSneckRun(View view){
-        //.setBackground( getResources().getDrawable(R.drawable.bigIb));
+        //.setBackground( getResources().getDrawable(R.drawable.big_ib));
     }
 
 }
