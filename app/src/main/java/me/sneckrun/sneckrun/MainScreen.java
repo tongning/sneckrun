@@ -1,5 +1,6 @@
 package me.sneckrun.sneckrun;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.icu.text.RelativeDateTimeFormatter;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.EditText;
-
+//import android.widget.Context;
 public class MainScreen extends AppCompatActivity {
     private Button button;
     @Override
@@ -18,6 +19,7 @@ public class MainScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         button = (Button) findViewById(R.id.needSneck);
+        //SharedPreferences = getActivi
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
