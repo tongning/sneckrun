@@ -2,6 +2,8 @@ package me.sneckrun.sneckrun;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -10,4 +12,9 @@ public class MainScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
     }
+
+    public void initiateSneckRun(View view){
+
+    }
+
 }

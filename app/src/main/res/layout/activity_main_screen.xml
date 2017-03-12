@@ -10,8 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="me.sneckrun.sneckrun.MainScreen">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <Button
+        android:id="@+id/needSneck"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="SNECK"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/roundedbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="initiateSneckRun"/>
+
 </RelativeLayout>
