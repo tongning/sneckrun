@@ -14,7 +14,7 @@ public class MainScreen extends AppCompatActivity {
     }
 
     public void initiateSneckRun(View view){
-
+        //.setBackground( getResources().getDrawable(R.drawable.bigIb));
     }
 
 }
