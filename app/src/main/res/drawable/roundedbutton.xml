@@ -6,4 +6,6 @@
         android:bottomLeftRadius="300dp"
         android:topRightRadius="300dp"
         android:topLeftRadius="300dp"/>
+
+
 </shape>

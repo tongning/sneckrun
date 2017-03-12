@@ -20,6 +20,7 @@
         android:background="@drawable/roundedbutton"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+
         android:onClick="initiateSneckRun"/>
 
 </RelativeLayout>
