@@ -27,9 +27,9 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
         //Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
         //create notification
         SharedPreferences names = MainScreen.getNames();
-        String data1 = remoteMessage.getData().get("test1");
-        String data2 = remoteMessage.getData().get("test2");
-        createNotification(data1, data2);
+        String name = remoteMessage.getData().get("name");
+
+        createNotification("Someone wants to snack run!", name+" wants to snackrun.");
 
     }
 
