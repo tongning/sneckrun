@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+import android.widget.EditText;
 
 public class MainScreen extends AppCompatActivity {
     private Button button;
@@ -37,8 +38,11 @@ public class MainScreen extends AppCompatActivity {
     }
 
     public void saveBox(View view) {
-        view.
-    }
+        EditText textBox= (EditText) findViewById(R.id.editText4);
+        String valToSave = textBox.getText().toString();
+
+        textBox.setText("");
     }
 
 }
+
