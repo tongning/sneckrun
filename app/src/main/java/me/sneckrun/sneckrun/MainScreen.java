@@ -47,7 +47,7 @@ public class MainScreen extends AppCompatActivity {
 
                 MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("name", "some name");
+                params.put("name", preference.getString("NickName", "???????????"));
 
                 JSONObject parameter = new JSONObject(params);
                 OkHttpClient client = new OkHttpClient();
